@@ -1,0 +1,27 @@
+h4 {
+	padding-top: 90px;
+	}
+	
+.form-select {
+	margin-top: 35px;
+	margin-left: 50px;
+	}
+	
+.form-control-sm {
+	margin-top: 28px;
+	}
+		
+.btnConnection {
+	margin-left: 970px;
+	padding: 10px;
+	border-radius: 5px;
+	}
+
+.btn {
+	margin-top: 20px;
+	}
+	
+.header {
+	background-color: #31AF31;
+	color: white; 
+	}

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+   <meta charset="UTF-8"/>
+			<link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+			<link rel= "stylesheet" type="text/css" media="all" 
+			th:href="@{/transfers.css}"/>
+			
+			
+      <title>Transfer</title>
+   </head>
+  
+   <body>
+   <main  role="main">
+  		<div th:insert="navbar :: navbar"/>
+</main>
+      <div class="container">
+    
+    
+     <div class="row">
+					<div class="col">
+					</div>
+					<div class="col-8">
+					</div>
+					<div class="col">
+					</div>
+				</div>
+     		 <div style="margin-top: 50px; background-color: #E7EDE7; padding-bottom: 40px;" class="row">
+			<div class="col-2">
+			</div>
+			<div style="text-align: center; font-size: 25px;" class="col-6">
+			<span th:utext="${amount}"></span>€
+			</div>
+			<div style="margin-top: 50px; margin-left: 50px;" class="col-2">
+			</div>
+     		</div>
+    
+    
+ 
+     
+      </body>
+   
+</html>
+
+ 

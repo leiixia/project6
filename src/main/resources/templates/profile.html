@@ -1,0 +1,61 @@
+ <!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+   <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+			<link rel= "stylesheet" type="text/css" media="all" 
+			th:href="@{/profile.css}"/>
+			
+			
+      <title>Profile</title>
+   </head>
+   
+ 
+   <body>
+   
+   <main  role="main">
+  		<div th:insert="navbar :: navbar"/>
+</main>
+
+	      <div class="container">
+     <!-- <th:block th:include="/_menu"></th:block> -->
+     
+     			
+    
+      <h1> Informations Personnelles </h1>
+      <p>
+      <div class="container">
+      
+      <form th:action="@{/profile}"
+     		 th:object="${user}" method="POST">
+     		 
+      <div class="form-floating mb-3">
+      	<label class="form-label"> Name </label>
+    		<input class="form-control" th:field="*{name}" id="name" name="name"/>
+    		<label class="form-label"> Mail </label>
+    		<input class="form-control" disabled th:field="*{mail}" id="mail" name="mail"/>
+    		<label class="form-label"> Password </label>
+    		<input class="form-control" disabled th:field="*{password}" id="password" name="password"/>
+    		
+		</div>
+		
+		<h2> Localisation </h2>
+		
+		<div class="form-floating mb-3">
+      	<label class="form-label"> Adress </label>
+    		<input class="form-control" th:field="*{adress}" id="adress" name="adress"/>
+    		<label class="form-label"> City </label>
+    		<input class="form-control"  th:field="*{city}" id="city" name="city"/>
+    		<label class="form-label"> Zip </label>
+    		<input class="form-control" th:field="*{zip}" id="zip" name="zip"/>
+    		
+		</div>
+		
+	 <div class= "btnAdd">
+        <input class="btn btn-success" type="submit" value="Save"/>
+      </div>
+     
+      </form> 
+
+    	</div>
+   </body>
+</html>

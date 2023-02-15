@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class BankDAO {
@@ -11,6 +12,7 @@ public class BankDAO {
 	 @Autowired
 		private BankRepository bankRepository;
 	 
+	 	@Transactional
 	 	public int getAmount() {
 	 		Iterable<Bank> findAll = bankRepository.findAll();	
 	 		Iterator<Bank> iterator = findAll.iterator();
@@ -20,6 +22,7 @@ public class BankDAO {
 	 		return 0; 
 	 	}
 	 	
+	 	@Transactional
 	 	public void addAmount(int amount) {
 	 		Bank bank = new Bank();
 	 		bank.setAmount(0);

@@ -9,9 +9,5 @@ public interface TransactionsRepository extends CrudRepository<Transactions, Lon
 	
 	List<Transactions> findBySenderId(Long sender_id);
 	List<Transactions> findByReceiverId(Long receiver_id);
-	
-	//@Query("SELECT coalesce(max(e.id), 0) FROM Transactions e")
-	//Long getMaxid();
-
 
 }
